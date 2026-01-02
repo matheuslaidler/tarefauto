@@ -31,17 +31,17 @@ O **Tarefauto** é uma ferramenta de automação que permite gravar suas ações
 ### Para que serve?
 
 - 🎮 **Jogos**: Automatizar ações repetitivas em jogos (PERIGOSO)
-- 📊 **Trabalho**: Automatizar preenchimento de determinados tipos de planilhas/formulários ou outras atividades do gênero que sejam repetitivas
-- 🧪 **Testes**: Criar testes automatizados de interface
+- 📊 **Trabalho**: Automatizar preenchimento de determinados tipos de planilhas/formulários ou outras atividades do gênero, que sejam repetitivas
+- 🧪 **Testes**: Criar testes repetitivos automatizados de interface
 - 🔄 **Tarefas repetitivas**: Qualquer ação que você faz várias vezes
 
->Para gamers: Use por conta e risco, muitos anti-cheaters podem detectar, o software não foi feito para ser um cheat e sim uma ferramenta de trabalho.
+>Para gamers: Use por conta e risco,visto que muitos anti-cheaters podem sim detectar o comportamento automatizado. O software não foi feito para ser um cheat e sim uma ferramenta de trabalho.
 
 ### Diferenciais
 
 - ✅ **Interface amigável**: GUI moderna e intuitiva
 - ✅ **Cross-platform**: Funciona em Windows, Linux e macOS
-- ✅ **Atalhos globais**: Controle o programa sem precisar clicar nele por teclas de atalho
+- ✅ **Atalhos globais**: Controle o programa sem precisar clicar nele, gravando ou reproduzindo ações através de teclas de atalho
 - ✅ **Múltiplos modos de repetição**: Uma vez, X vezes, por tempo, infinito
 - ✅ **Controle de velocidade**: Reproduza mais rápido ou mais devagar
 - ✅ **Código aberto**: 100% gratuito e transparente
@@ -60,7 +60,7 @@ O **Tarefauto** é uma ferramenta de automação que permite gravar suas ações
 #### Windows (PowerShell)
 
 ```powershell
-# 1. Clone o repositório (ou baixe o ZIP)
+# 1. Clone o repositório (ou baixe o ZIP, caso tenha em releases)
 git clone https://github.com/matheuslaidler/tarefauto.git
 
 # 2. Entre na pasta
