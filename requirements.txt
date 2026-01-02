@@ -1,0 +1,42 @@
+# ============================================================================
+# TarefAuto - Requirements (Dependências do Projeto)
+# ============================================================================
+# Este arquivo lista todas as bibliotecas Python necessárias para executar
+# o TarefAuto. Para instalar todas as dependências, execute:
+#
+#   pip install -r requirements.txt
+#
+# ============================================================================
+
+# pynput - Biblioteca principal para captura e simulação de mouse/teclado
+# Versão 1.8.0 ou superior necessária para compatibilidade cross-platform
+# Funciona em Windows, Linux (X11) e macOS
+# Documentação: https://pynput.readthedocs.io/
+pynput>=1.8.0
+
+# CustomTkinter - Framework de GUI moderna baseada em Tkinter
+# Oferece widgets modernos com suporte nativo a temas escuros
+# Permite personalização completa de cores e estilos
+# Documentação: https://customtkinter.tomschimansky.com/
+customtkinter>=5.2.0
+
+# Pillow - Biblioteca de processamento de imagens
+# Usada para carregar e exibir ícones/logos na interface
+# Documentação: https://pillow.readthedocs.io/
+Pillow>=10.0.0
+
+# ============================================================================
+# Dependências Opcionais (para desenvolvimento/distribuição)
+# ============================================================================
+
+# PyInstaller - Para gerar executáveis standalone
+# Descomente a linha abaixo se quiser criar .exe ou binários
+# pyinstaller>=6.0
+
+# ============================================================================
+# Notas de Compatibilidade:
+# - Windows: Funciona nativamente, sem configurações adicionais
+# - Linux: Requer X11 (Wayland não é totalmente suportado pelo pynput)
+#          Pode ser necessário instalar: sudo apt install python3-tk python3-dev
+# - macOS: Requer permissões de Acessibilidade nas Preferências do Sistema
+# ============================================================================
