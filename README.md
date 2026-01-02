@@ -192,10 +192,10 @@ Ao abrir o programa, você verá três abas:
 2. Escolha o que deseja gravar:
    - ☑️ Mouse (cliques e movimentos)
    - ☑️ Teclado (teclas pressionadas)
-3. Clique em **⏺️ INICIAR GRAVAÇÃO**
+3. Clique em **⏺️ INICIAR GRAVAÇÃO** (ou use `F9`)
 4. Execute as ações que deseja automatizar
-5. Clique em **⏹️ PARAR GRAVAÇÃO** (ou use `Ctrl+F9`)
-6. Clique em **💾 Salvar Gravação** para guardar em um arquivo
+5. Clique em **⏹️ PARAR GRAVAÇÃO** (ou use `F9` / `ESC`)
+6. Com auto-save ligado, sua gravação já estará salva. Clique em **💾 Salvar Gravação** para guardar o JSON em algum lugar, caso queira ou o auto-save estiver desligado.
 
 ### Reproduzindo Ações
 
@@ -204,8 +204,8 @@ Ao abrir o programa, você verá três abas:
 3. Configure as opções:
    - **Modo de repetição**: Uma vez, X vezes, por tempo, ou infinito
    - **Velocidade**: 0.5x (devagar) até 5x (rápido)
-4. Clique em **▶️ INICIAR REPRODUÇÃO**
-5. Para parar, clique em **⏹️ PARAR** ou pressione `Esc`
+4. Clique em **▶️ INICIAR REPRODUÇÃO** ou (ou use `F10`)
+5. Para encerrar reprodução, clique em **⏹️ PARAR** ou use `F10`, ou então pressione  `Esc` como emergência para parar tudo.
 
 ### Atalhos de Teclado
 
