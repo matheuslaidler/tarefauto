@@ -6,9 +6,9 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-**Automação de Tarefas Repetitivas**
+**Automação de Tarefas Simples Repetitivas**
 
-*Um macro avançado que grava e reproduz ações de mouse e teclado*
+*Um macro avançado que grava e reproduz ações de mouse e teclado de forma rápida e fácil*
 
 [Instalação](#-instalação) •
 [Como Usar](#-como-usar) •
@@ -265,6 +265,49 @@ Exemplo de estrutura:
   ]
 }
 ```
+
+### Modo de Edição
+
+Após sua primeira gravação será liberada opções como salvar (caso não use o auto-save ou queira salvar com outro nome em outro diretório) e editar.
+A opção de editar é exatamente isso, editar essa gravação. 
+
+Como falado anteriormente, toda a gravação que o programa faz da tela ele transforma em JSON e que você pode modificar isso (ou até pedir para uma IA mudar algo para você) antes de utilizar para reprodução.
+
+O botão editar facilita isso já abrindo para você direto. No windows, por exemplo, ele abrirá o bloco de notas com o JSON da sua gravação. Bom para quem teve que clicar em parar manualmente e quer tentar retirar essa parte.
+
+Exemplo de JSON para edição:
+
+```JSON
+{
+  "version": "1.0.0",
+  "name": "Gravação sem nome",
+  "description": "",
+  "created_at": "2026-01-02T08:00:44.611127",
+  "settings": {
+    "record_mouse": true,
+    "record_keyboard": true
+  },
+  "events": [
+    {
+      "t": 0.06884622573852539,
+      "type": "MOUSE_CLICK",
+      "x": 950,
+      "y": 611,
+      "btn": "left",
+      "pressed": false
+    },
+    {
+      "t": 0.6830654144287109,
+      "type": "MOUSE_CLICK",
+      "x": 950,
+      "y": 611,
+      "btn": "left",
+      "pressed": true
+    }
+  ]
+}
+```
+
 
 ---
 
