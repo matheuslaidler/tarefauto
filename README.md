@@ -8,7 +8,7 @@
 
 **Automação de Tarefas Repetitivas**
 
-*Um autoclicker avançado que grava e reproduz ações de mouse e teclado*
+*Um macro avançado que grava e reproduz ações de mouse e teclado*
 
 [Instalação](#-instalação) •
 [Como Usar](#-como-usar) •
@@ -18,24 +18,30 @@
 
 </div>
 
+
 ---
 
 ## 📖 O que é o TarefAuto?
 
-O **TarefAuto** é uma ferramenta de automação que permite gravar suas ações no computador (cliques de mouse, movimentos, teclas digitadas) e reproduzi-las automaticamente. É como um "gravador de macros" ou um "autoclicker" avançado.
+O **Tarefauto** é uma ferramenta de automação que permite gravar suas ações no computador (desde cliques do mouse e seus movimentos até teclas digitadas) e reproduzi-las automaticamente. É como um "gravador de macros", "autoclicker" ou "autotyper" avançado.
+
+<img width="50%" alt="Captura de tela 2026-01-02 053243" src="https://github.com/user-attachments/assets/b2a90dd2-5f29-4858-aaa4-6c57b5ff5da2" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/77352a32-9c6b-4ef1-a784-de521e592b4f" />
 
 ### Para que serve?
 
-- 🎮 **Jogos**: Automatizar ações repetitivas em jogos
-- 📊 **Trabalho**: Automatizar preenchimento de planilhas e formulários
+- 🎮 **Jogos**: Automatizar ações repetitivas em jogos (PERIGOSO)
+- 📊 **Trabalho**: Automatizar preenchimento de determinados tipos de planilhas/formulários ou outras atividades do gênero que sejam repetitivas
 - 🧪 **Testes**: Criar testes automatizados de interface
 - 🔄 **Tarefas repetitivas**: Qualquer ação que você faz várias vezes
+
+>Para gamers: Use por conta e risco, muitos anti-cheaters podem detectar, o software não foi feito para ser um cheat e sim uma ferramenta de trabalho.
 
 ### Diferenciais
 
 - ✅ **Interface amigável**: GUI moderna e intuitiva
 - ✅ **Cross-platform**: Funciona em Windows, Linux e macOS
-- ✅ **Atalhos globais**: Controle o programa sem precisar clicar nele
+- ✅ **Atalhos globais**: Controle o programa sem precisar clicar nele por teclas de atalho
 - ✅ **Múltiplos modos de repetição**: Uma vez, X vezes, por tempo, infinito
 - ✅ **Controle de velocidade**: Reproduza mais rápido ou mais devagar
 - ✅ **Código aberto**: 100% gratuito e transparente
@@ -350,6 +356,10 @@ tarefauto/
 | [Pillow](https://pillow.readthedocs.io/) | Manipulação de imagens |
 
 ### Criando um Executável
+
+Em breve criaremos o executável para windows e o binário para linux, assim facilitaria para muitos usuários.
+
+Como a maioria dos usuários leigos usam windows, vou deixar abaixo uma forma de criar o executável você mesmo.
 
 Para criar um arquivo `.exe` executável em windows:
 
