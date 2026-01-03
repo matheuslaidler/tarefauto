@@ -48,6 +48,41 @@ O **Tarefauto** é uma ferramenta de automação que permite gravar suas ações
 
 ---
 
+## Utilização rápida do TarefAuto
+
+Baixe sempre do último release, escolhendo o executável de acordo com seu sistema operacional.
+
+Pode também pegar pelo clone da raiz original do projeto, a pasta/diretório `/dist/` estará os executáveis.
+
+### Windows
+
+Apenas execute o `tarefauto.exe`
+
+### Linux
+
+Apenas execute o binário `tarefauto`
+
+```bash
+chmod +x ./tarefauto
+./tarefauto
+```
+
+### macOS
+
+Use o arquivo `.app` (quando disponível) ou um build específico para macOS.
+
+Já me falaram que um binário criado em linux funcionaria para macOS por ser Unix-like, mas isso não parece fazer sentido. O binário gerado no Linux é de formato *ELF* e para o macOS deveria ser *Mach-O*. Geralmente, cada sistema precisa do seu próprio build.
+
+Em outras palavras, um output comum para macOS seria um .app (bundle) e/ou um executável Mach‑O dentro dele.
+
+> Caso não tenha o executável para macOS nas releases ou no repositório atual, considere criar um você mesmo com pyinstaller - *tutorial ainda neste readme*. Se quiser pode criar e fazer a contribuição.
+
+**Pronto!! Agora só utilizar o software como quiser.**
+
+Agora, caso queira o projeto completo (e quem sabe até modificar), siga os próximos passos.
+
+---
+
 ## 🚀 Instalação
 
 ### Pré-requisitos
@@ -315,11 +350,11 @@ Exemplo de JSON para edição:
 
 ### Antivírus
 
-Alguns antivírus podem detectar o TarefAuto como suspeito porque ele:
+Supostamente alguns antivírus podem detectar o TarefAuto (meu malwarebytes e windows defender não se confundiram) porque ele:
 - Captura eventos de teclado (como um keylogger faria)
 - Simula cliques de mouse (como malware faria)
 
-**Isso é um falso positivo!** O TarefAuto:
+**Se acontecer, o que é difícil, entenda: isso é um falso positivo!** O Tarefauto:
 - ✅ É código aberto - você pode verificar o código
 - ✅ Não envia nenhum dado para a internet
 - ✅ Não salva senhas ou informações sensíveis
@@ -398,23 +433,79 @@ tarefauto/
 | [CustomTkinter](https://customtkinter.tomschimansky.com/) | Interface gráfica moderna |
 | [Pillow](https://pillow.readthedocs.io/) | Manipulação de imagens |
 
+### Executável
+
+O projeto já conta com executável para windows e binário para linux, assim vocês podem apenas abrir o programa diretamente, sem precisar passar por todo o procedimento de instalação. Porém, caso queira criar seu próprio executável, como por exemplo criar um depois de ter modificado coisas do código, então pode seguir os passos abaixo.
+
+### PyInstaller
+
+O PyInstaller gera saídas em dois formatos principais:
+
+- **--onefile**: sai **um único arquivo** (ex.: `TarefAuto.exe` no Windows ou `TarefAuto` no Linux). Em geral você pode mover e rodar só ele.
+- **--onedir**: sai uma **pasta** com o executável e dependências. Você precisa levar a pasta inteira.
+
+> No Linux/macOS, mesmo no modo **--onefile**, a máquina destino pode precisar de bibliotecas do sistema (ex.: componentes gráficos/Tk).
+
 ### Criando um Executável
 
-Em breve criaremos o executável para windows e o binário para linux, assim facilitaria para muitos usuários.
-
-Como a maioria dos usuários leigos usam windows, vou deixar abaixo uma forma de criar o executável você mesmo.
-
-Para criar um arquivo `.exe` executável em windows:
+Para criar um arquivo executável de terafauto:
 
 ```powershell
 # Instale o PyInstaller
 pip install pyinstaller
 
-# Crie o executável
-pyinstaller --onefile --windowed --name TarefAuto main.py
+# Crie o executável / Build "arquivo único" (Windows/Linux)
+pyinstaller --onefile --name TarefAuto main.py
+
+# Para windows com ícone
+pyinstaller --onefile --windowed --name TarefAuto --icon build/assets/robot.ico main.py
+
+# macOS com ícone (.icns) - gere no macOS
+pyinstaller --windowed --name TarefAuto --icon build/assets/robot.icns main.py
 ```
 
-O executável estará em `dist/TarefAuto.exe`.
+>O executável estará em `dist/TarefAuto.exe`.
+Sempre será criado o executável **para o sistema operacional em que você está compilando**, ou seja, o pyinstaller sempre criará um executável com base no sistema do agente.
+
+---
+
+### Criando atalho
+
+Se você usa windows, pode criar atalho do executável dentro de `dist` para onde queira (como a raiz do programa).
+
+Se você usa linux, pode fazer um alias com 'bashrc', ou criar o atalho com `sudo ln -s /caminho/para/TarefAuto /usr/local/bin/tarefauto`. Até mesmo criar um atalho `.desktop`, geralmente sendo posicionado em `~/.local/share/applications/` ou na área de trabalho, apontando para o `Exec=/caminho/para/TarefAuto`.
+
+**Linux**
+
+No Linux, o ícone mostrado no menu/launcher vem de um arquivo .desktop + um PNG/SVG instalado no tema de ícones.
+
+Para rodar no menu e aparecer com ícone, crie um .desktop e aponte para o ícone.
+
+Exemplo de .desktop (usuário atual):
+
+```shell
+# salve em: ~/.local/share/applications/tarefauto.desktop
+[Desktop Entry]
+Type=Application
+Name=TarefAuto
+Exec=/caminho/absoluto/para/tarefauto
+Icon=/caminho/absoluto/para/tarefauto/build/assets/robot.png
+Terminal=false
+Categories=Utility;
+```
+
+E depois:
+
+```shell
+chmod +x ~/.local/share/applications/tarefauto.desktop
+update-desktop-database ~/.local/share/applications 2>/dev/null || true
+```
+
+Criar um symlink em /usr/local/bin facilita chamada no terminal.
+
+```shell
+ln -s /caminho/absoluto/para/tarefauto /usr/local/bin/tarefauto
+```
 
 ---
 
