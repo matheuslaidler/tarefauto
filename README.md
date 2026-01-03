@@ -48,26 +48,49 @@ O **Tarefauto** é uma ferramenta de automação que permite gravar suas ações
 
 ---
 
-## Utilização rápida do TarefAuto
+## 🤖 Abrindo o TarefAuto
 
-Baixe sempre do último release, escolhendo o executável de acordo com seu sistema operacional.
+Baixe sempre do último release, escolhendo o ZIP do executável de acordo com seu sistema operacional.
 
-Pode também pegar pelo clone da raiz original do projeto, a pasta/diretório `/dist/` estará os executáveis.
+Pode também pegar pelo clone da raiz original do projeto, a pasta/diretório `/dist/` estará os executáveis disponíveis diretamente.
 
 ### Windows
 
-Apenas execute o `tarefauto.exe`
+- [Baixar a última versão](https://github.com/matheuslaidler/tarefauto/releases/latest) escolhendo o ZIP relacionado ao WINDOWS.
+- Extrair o .zip, clicando com botão direito e extrair aqui
+- Execute o `tarefauto.exe`
+- PRONTO!
 
 ### Linux
 
-Apenas execute o binário `tarefauto`
+- [Baixar a última versão](https://github.com/matheuslaidler/tarefauto/releases/latest) escolhendo o ZIP relacionado ao LINUX.
+- Extrair o .zip, clicando com botão direito ou com comando `unzip *tarefauto*.zip`
+- Execute o `tarefauto` pelo terminal:
+
+**Se for primeira vez:**
 
 ```bash
+#permissao
 chmod +x ./tarefauto
+#movendo para pasta de binario
+sudo mv ./tarefauto /usr/local/bin/tarefauto
+#abrindo programa
+tarefauto
+```
+A partir de agora, sempre que quiser abrir o programa basta executar o binário digitando `tarefauto` no terminal (de qualquer diretório).
+
+**Se apenas quiser executar logo**
+
+```bash
+#se pedir permissão
+chmod +x ./tarefauto
+#execução do binario
 ./tarefauto
 ```
 
 ### macOS
+
+[Baixar a última versão](https://github.com/matheuslaidler/tarefauto/releases/latest) escolhendo o ZIP relacionado ao MACOS, se disponível.
 
 Use o arquivo `.app` (quando disponível) ou um build específico para macOS.
 
@@ -77,11 +100,11 @@ Em outras palavras, um output comum para macOS seria um .app (bundle) e/ou um ex
 
 > Caso não tenha o executável para macOS nas releases ou no repositório atual, considere criar um você mesmo com pyinstaller - *tutorial ainda neste readme*. Se quiser pode criar e fazer a contribuição.
 
+---
+
 **Pronto!! Agora só utilizar o software como quiser.**
 
-Agora, caso queira o projeto completo (e quem sabe até modificar), siga os próximos passos.
-
----
+Agora, caso queira o projeto completo (e quem sabe até modificar), siga os próximos passos:
 
 ## 🚀 Instalação
 
