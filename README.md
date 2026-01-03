@@ -1,6 +1,8 @@
-# 🤖 TarefAuto
+# 🤖 TarefAuto: Tarefas Automatizadas 
 
 <div align="center">
+
+<img width="137" height="146" alt="image" src="https://github.com/user-attachments/assets/93e68c26-0643-4087-a79c-a3153108107b" />
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-green.svg)
@@ -21,9 +23,13 @@
 
 ---
 
-## 📖 O que é o TarefAuto?
+## 📖 O que é o Tarefauto?
 
-O **Tarefauto** é uma ferramenta de automação que permite gravar suas ações no computador (desde cliques do mouse e seus movimentos até teclas digitadas) e reproduzi-las automaticamente. É como um "gravador de macros", "autoclicker" ou "autotyper" avançado.
+Uma ferramenta de automação que grava suas ações no computador (cliques e movimentos do mouse, além de teclas digitadas) e depois reproduz tudo automaticamente. 
+
+Na prática, funciona como um gravador de macros, tal qual um autoclicker ou autotyper, só que mais completo: você executa uma sequência uma vez, e o programa pode repeti-la quantas vezes quiser ou até você parar. Uma mesma ação gravada pode ser executada/reproduzida de diferentes velocidades, durações ou repetições. 
+
+Durante a reprodução, o TarefAuto assume o controle de mouse e teclado para repetir a tarefa e por isso, o computador pode ficar limitado para outras atividades até a execução terminar ou ser cancelada pelo usuário.
 
 <img width="50%" alt="Captura de tela 2026-01-02 053243" src="https://github.com/user-attachments/assets/b2a90dd2-5f29-4858-aaa4-6c57b5ff5da2" />
 <img width="40%" alt="image" src="https://github.com/user-attachments/assets/77352a32-9c6b-4ef1-a784-de521e592b4f" />
