@@ -6,9 +6,9 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-**Automação de Tarefas Repetitivas**
+**Automação de Tarefas Simples Repetitivas**
 
-*Um autoclicker avançado que grava e reproduz ações de mouse e teclado*
+*Um macro avançado que grava e reproduz ações de mouse e teclado de forma rápida e fácil*
 
 [Instalação](#-instalação) •
 [Como Usar](#-como-usar) •
@@ -18,24 +18,30 @@
 
 </div>
 
+
 ---
 
 ## 📖 O que é o TarefAuto?
 
-O **TarefAuto** é uma ferramenta de automação que permite gravar suas ações no computador (cliques de mouse, movimentos, teclas digitadas) e reproduzi-las automaticamente. É como um "gravador de macros" ou um "autoclicker" avançado.
+O **Tarefauto** é uma ferramenta de automação que permite gravar suas ações no computador (desde cliques do mouse e seus movimentos até teclas digitadas) e reproduzi-las automaticamente. É como um "gravador de macros", "autoclicker" ou "autotyper" avançado.
+
+<img width="50%" alt="Captura de tela 2026-01-02 053243" src="https://github.com/user-attachments/assets/b2a90dd2-5f29-4858-aaa4-6c57b5ff5da2" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/77352a32-9c6b-4ef1-a784-de521e592b4f" />
 
 ### Para que serve?
 
-- 🎮 **Jogos**: Automatizar ações repetitivas em jogos
-- 📊 **Trabalho**: Automatizar preenchimento de planilhas e formulários
-- 🧪 **Testes**: Criar testes automatizados de interface
+- 🎮 **Jogos**: Automatizar ações repetitivas em jogos (PERIGOSO)
+- 📊 **Trabalho**: Automatizar preenchimento de determinados tipos de planilhas/formulários ou outras atividades do gênero, que sejam repetitivas
+- 🧪 **Testes**: Criar testes repetitivos automatizados de interface
 - 🔄 **Tarefas repetitivas**: Qualquer ação que você faz várias vezes
+
+>Para gamers: Use por conta e risco,visto que muitos anti-cheaters podem sim detectar o comportamento automatizado. O software não foi feito para ser um cheat e sim uma ferramenta de trabalho.
 
 ### Diferenciais
 
 - ✅ **Interface amigável**: GUI moderna e intuitiva
 - ✅ **Cross-platform**: Funciona em Windows, Linux e macOS
-- ✅ **Atalhos globais**: Controle o programa sem precisar clicar nele
+- ✅ **Atalhos globais**: Controle o programa sem precisar clicar nele, gravando ou reproduzindo ações através de teclas de atalho
 - ✅ **Múltiplos modos de repetição**: Uma vez, X vezes, por tempo, infinito
 - ✅ **Controle de velocidade**: Reproduza mais rápido ou mais devagar
 - ✅ **Código aberto**: 100% gratuito e transparente
@@ -54,7 +60,7 @@ O **TarefAuto** é uma ferramenta de automação que permite gravar suas ações
 #### Windows (PowerShell)
 
 ```powershell
-# 1. Clone o repositório (ou baixe o ZIP)
+# 1. Clone o repositório (ou baixe o ZIP, caso tenha em releases)
 git clone https://github.com/matheuslaidler/tarefauto.git
 
 # 2. Entre na pasta
@@ -186,10 +192,10 @@ Ao abrir o programa, você verá três abas:
 2. Escolha o que deseja gravar:
    - ☑️ Mouse (cliques e movimentos)
    - ☑️ Teclado (teclas pressionadas)
-3. Clique em **⏺️ INICIAR GRAVAÇÃO**
+3. Clique em **⏺️ INICIAR GRAVAÇÃO** (ou use `F9`)
 4. Execute as ações que deseja automatizar
-5. Clique em **⏹️ PARAR GRAVAÇÃO** (ou use `Ctrl+F9`)
-6. Clique em **💾 Salvar Gravação** para guardar em um arquivo
+5. Clique em **⏹️ PARAR GRAVAÇÃO** (ou use `F9` / `ESC`)
+6. Com auto-save ligado, sua gravação já estará salva. Clique em **💾 Salvar Gravação** para guardar o JSON em algum lugar, caso queira ou o auto-save estiver desligado.
 
 ### Reproduzindo Ações
 
@@ -198,8 +204,8 @@ Ao abrir o programa, você verá três abas:
 3. Configure as opções:
    - **Modo de repetição**: Uma vez, X vezes, por tempo, ou infinito
    - **Velocidade**: 0.5x (devagar) até 5x (rápido)
-4. Clique em **▶️ INICIAR REPRODUÇÃO**
-5. Para parar, clique em **⏹️ PARAR** ou pressione `Esc`
+4. Clique em **▶️ INICIAR REPRODUÇÃO** ou (ou use `F10`)
+5. Para encerrar reprodução, clique em **⏹️ PARAR** ou use `F10`, ou então pressione  `Esc` como emergência para parar tudo.
 
 ### Atalhos de Teclado
 
@@ -259,6 +265,49 @@ Exemplo de estrutura:
   ]
 }
 ```
+
+### Modo de Edição
+
+Após sua primeira gravação será liberada opções como salvar (caso não use o auto-save ou queira salvar com outro nome em outro diretório) e editar.
+A opção de editar é exatamente isso, editar essa gravação. 
+
+Como falado anteriormente, toda a gravação que o programa faz da tela ele transforma em JSON e que você pode modificar isso (ou até pedir para uma IA mudar algo para você) antes de utilizar para reprodução.
+
+O botão editar facilita isso já abrindo para você direto. No windows, por exemplo, ele abrirá o bloco de notas com o JSON da sua gravação. Bom para quem teve que clicar em parar manualmente e quer tentar retirar essa parte.
+
+Exemplo de JSON para edição:
+
+```JSON
+{
+  "version": "1.0.0",
+  "name": "Gravação sem nome",
+  "description": "",
+  "created_at": "2026-01-02T08:00:44.611127",
+  "settings": {
+    "record_mouse": true,
+    "record_keyboard": true
+  },
+  "events": [
+    {
+      "t": 0.06884622573852539,
+      "type": "MOUSE_CLICK",
+      "x": 950,
+      "y": 611,
+      "btn": "left",
+      "pressed": false
+    },
+    {
+      "t": 0.6830654144287109,
+      "type": "MOUSE_CLICK",
+      "x": 950,
+      "y": 611,
+      "btn": "left",
+      "pressed": true
+    }
+  ]
+}
+```
+
 
 ---
 
@@ -350,6 +399,10 @@ tarefauto/
 | [Pillow](https://pillow.readthedocs.io/) | Manipulação de imagens |
 
 ### Criando um Executável
+
+Em breve criaremos o executável para windows e o binário para linux, assim facilitaria para muitos usuários.
+
+Como a maioria dos usuários leigos usam windows, vou deixar abaixo uma forma de criar o executável você mesmo.
 
 Para criar um arquivo `.exe` executável em windows:
 
